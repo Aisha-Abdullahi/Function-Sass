@@ -1,0 +1,68 @@
+$color-primary: red;
+$color-secondary: green;
+$color-tertiary: blue;
+$font-size: 1rem;
+
+
+@function rem($pixels) {
+    @return calc(#{$pixels / 16}rem);
+}
+
+@mixin article-card($color, $border-color, $font-size: $font-size) {
+    color: $color;
+    border: 2px solid $border-color;
+    padding: 1rem;
+    font-size: rem($font-size);
+}
+
+body {
+    font-size: rem($font-size);
+}
+
+div {
+    display: table;
+    border: 2px solid $color-primary;
+    padding: rem(20);
+
+    h1 {
+        color: $color-secondary;
+        text-align: center;
+        margin-bottom: 0;
+    }
+
+    .first-section {
+        display: table;
+
+        .article-card {
+            margin: rem(1);
+            display: table-cell;
+
+            &:nth-child(odd) {
+                @include article-card($color-tertiary, $color-secondary);
+            }
+
+            &:nth-child(even) {
+                @include article-card($color-primary, $color-secondary);
+            }
+        }
+    }
+
+    .footer {
+        display: table;
+        margin-top: rem(20);
+
+        .article-card {
+            @include article-card($color-secondary, $color-tertiary);
+            margin: rem(2);
+            display: table-cell;
+            font-size: rem(24);
+        }
+    }
+}
+
+hr {
+    width: rem(25);
+    font-weight: 700;
+    color: $color-tertiary;
+    margin-top: 0;
+}

@@ -1,0 +1,55 @@
+body {
+  font-size: calc(0.0625remrem);
+}
+
+div {
+  display: table;
+  border: 2px solid red;
+  padding: calc(1.25rem);
+}
+div h1 {
+  color: green;
+  text-align: center;
+  margin-bottom: 0;
+}
+div .first-section {
+  display: table;
+}
+div .first-section .article-card {
+  margin: calc(0.0625rem);
+  display: table-cell;
+}
+div .first-section .article-card:nth-child(odd) {
+  color: blue;
+  border: 2px solid green;
+  padding: 1rem;
+  font-size: calc(0.0625remrem);
+}
+div .first-section .article-card:nth-child(even) {
+  color: red;
+  border: 2px solid green;
+  padding: 1rem;
+  font-size: calc(0.0625remrem);
+}
+div .footer {
+  display: table;
+  margin-top: calc(1.25rem);
+}
+div .footer .article-card {
+  color: green;
+  border: 2px solid blue;
+  padding: 1rem;
+  font-size: calc(0.0625remrem);
+  margin: calc(0.125rem);
+  display: table-cell;
+  font-size: calc(1.5rem);
+}
+
+hr {
+  width: calc(1.5625rem);
+  font-weight: 700;
+  color: blue;
+  margin-top: 0;
+}
+
+/*# sourceMappingURL=style.css.map */
